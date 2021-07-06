@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+/*全称セレクタ*/
+/* * * * * * * * *
+*	base
+* * * * * * * * */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+*{
+	margin:0;
+	padding:0;
+}
+html {
+  font-size: 100%;
+}
+img {
+  width: 100%;
+}
+body{
+  font-size: 62.5%;
+  color: #72645C;
+}
+strong{
+  color: #FA3E63;
+}
+h2{
+  color: #fff;
+  background: #fa3e63;
+  font-size: 1.8em;
+  padding: 10px 3px 8px 40px;
+  margin: 2px 0 10px; //上 左右 下
+  border-radius: 8px;
+}
+.inner{
+  width: 98%;
+	margin:0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* * * * * * * * *
+*	header
+* * * * * * * * */
+header{
+  align-items: center;
+  img{
+    width: 160px;
+    padding: 0;
+    margin: 5px 0 0 5px;
+  }
+  #a{
+    background: #1E8941;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+      font-size: 1.8em;
+      text-shadow: #005c0f 0 -1px 0;
+      padding: 7px 0 7px 7px;
+      color: #fff;
+    }
+  }
+}
+#h_btn{
+  margin: 4px 7px 4px 5px;
+  padding: 6px 10px 6px 5px;
+  border: 1px #005c0f solid;
+  border-radius: 5px 15px 15px 5px / 5px 15px 15px 5px;
+  a {
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-shadow: #2d8014 0 -1px 0;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+/* * * * * * * * *
+*	スタートアップ
+* * * * * * * * */
+section{
+  background: #FFE8EA;
+}
+.p_case{
+  background: #fff;
+  padding: 10px 10px 98px;
+  border-radius: 8px;
+}
+
+/* * * * * * * * *
+*	about_licence
+* * * * * * * * */
+span{
+  color: #FA3E63;
+}
+
+dl.about_license {
+	background: #ffe8ea;
+	margin: -3px 0 0 0;
+	padding: 5px 5px 10px;
+}
+dl.about_license dt {
+	position: relative;
+	background: #fa3f64;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.4em;
+	line-height: 100%;
+	padding: 5px 0 5px 5px;
+	width: 110px;
+	text-align: center;
+	margin: 0 0 0 -5px;
+}
+dl.about_license dt:after, dl.about_license dt:before {
+	left: 127px;
+	top: 0;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+dl.about_license dt:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: #fa3f64;
+	border-width: 12px;
+	margin-left: -12px;
+}
+dl.about_license dt:before {
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: #fa3f64;
+	border-width: 12px;
+	margin-left: -12px;
+}
+dd{
+  background: #fff;
+  margin: -32px 5px 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+h3{
+  color: #3a3a3a;
+  font-size: 1.8em;
+  line-height: 125%;
+  margin: 20px 0 10px;
+  padding-top: 20px;
+}
+.li_img{
+  width: 40%;
+  float: right;
+  margin: 0 5px 5px 10px;
+}
+/* * * * * * * * *
+*	table
+* * * * * * * * */
+table{
+  width: 100%;
+  line-height: 120%;
+  margin: 10px 0;
+  border-collapse: collapse; //線の隙間なくす
+  th{
+    background: #ffe8ea;
+    border: 1px solid #ccc;
+    padding: 3px;
+  }
+  td{
+    background: #fff;
+    text-align: right;
+    border: 1px solid #ccc;
+    padding: 3px;
+  }
+}
+tbody th{
+  width: 15em;
+}
+#pp{
+  color: #6e6e6e;;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 0.5em;
+}
+/* * * * * * * * *
+*	講座を探す
+* * * * * * * * */
+#btimg{
+  background: #fff;
+}
+/* * * * * * * * *
+*	資格取得するには
+* * * * * * * * */
