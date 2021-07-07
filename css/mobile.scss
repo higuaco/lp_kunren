@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media screen and (min-width:780px){
+@media screen and (max-width:500px){
 
 /*全称セレクタ*/
 /* * * * * * * * *
@@ -229,8 +229,9 @@ tbody th{
       font-weight: bold;
       background: #fff;
       color: #895623;
+      font-size: 1em;
       border-bottom: 2px solid #f1e3bc;
-      padding: 10px 5px 10px 38px;
+      padding: 10px 5px 10px 10px;
     }
   }
 }
