@@ -9,13 +9,32 @@
   <link rel="stylesheet" href="css/mobile.css" media="(max-width:500px)">
   <link rel="stylesheet" href="css/tablet.css" media="(max-width:779px) and (min-width: 501px)">
   <link rel="stylesheet" href="css/desktop.css" media="(min-width:780px)">
+  <link rel="stylesheet" href="css/hamburgerMenu.css">
   <title>初任者LP</title>
-  </head>
-  <body>
+</head>
+<body>
 
-      <!-- header -->
-			<header>
-				<img src="img/headlogo.png" alt="ロゴ写真">
+  <!-- header -->
+  <header>
+    <!-- ハンバーガーメニュー -->
+    <div class="header__nav">
+      <div class="header__nav__wrapper">
+        <img src="img/headlogo.png" alt="ロゴ写真">
+        <div class="hamburger-menu">
+          <span class="hamburger-menu__line"></span>
+          <span class="hamburger-menu__line--dummy"></span>
+        </div>
+        <ul class="header-menu">
+          <li class="header__menu__item"><a href="#">HOME</a></li>
+          <li class="header__menu__item"><a href="#">MENU1</a></li>
+          <li class="header__menu__item"><a href="#">MENU2</a></li>
+          <li class="header__menu__item"><a href="#">MENU3</a></li>
+          <li class="header__menu__item"><a href="#">MENU4</a></li>
+        </ul>
+      </div>
+    </div>
+      <!-- ハンバーガーメニュー以上 -->
+
         <div id="a">
           <h1>介護職員初任者研修</h1>
           <div id="h_btn">
@@ -152,5 +171,52 @@
           <img src="img/check2.png" alt="講座を探す">
           <img src="img/tel2.gif" alt="電話番号">
           <img src="img/end.gif" alt="比較">
+          <!-- ハンバーガーメニューJavaScript -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(function() {
+
+      const spBreakPoint = 670;
+      let headerTop = 40;
+      let headerHeight = 0;
+
+      if ($(window).width() > spBreakPoint) {
+        headerHeight = 620;
+      } else {
+        headerHeight = 355;
+      }
+
+      $(window).on('scroll', function () {
+        if ($(window).width() > spBreakPoint) {
+          if ($(this).scrollTop() > headerTop) {
+            $('.header__nav').addClass('position-change');
+          } else {
+            $('.header__nav').removeClass('position-change');
+          }
+        }
+        if ($(this).scrollTop() > headerHeight) {
+          $('.header__nav').addClass('color-chnage');
+        } else {
+          $('.header__nav').removeClass('color-chnage');
+        }
+
+        let workDescTop = $('#work__desc').offset().top;
+        if ($(this).scrollTop() > (workDescTop - 50)) {
+          $('.work').addClass('arrow_display');
+        }
+      });
+
+      /*** ハンバーガーメニューの表示/非表示 ***/
+      $('.hamburger-menu').on('click', function() {
+        $('.hamburger-menu').toggleClass('active');
+        $('.header-menu').toggleClass('height-change');
+      });
+      $('.header__menu__item').on('click', function() {
+        $('.hamburger-menu').removeClass('active');
+        $('.header-menu').toggleClass('height-change');
+      });
+
+    });
+    </script>
   </body>
 </html>
